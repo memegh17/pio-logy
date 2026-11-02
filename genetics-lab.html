@@ -1,0 +1,197 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>مختبر الوراثة | أسرار مندل</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e2a;--pu:#8b5cf6;--tq:#2dd4bf;--tx:#f4f6ff;--mu:#a9b0d6;--bad:#fb7185;--gl:rgba(255,255,255,.07);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(circle at 85% 0,#2d1b72,transparent 45%),radial-gradient(circle at 5% 100%,#0b5260,transparent 40%),var(--bg);color:var(--tx);font:500 17px/1.8 Tajawal,sans-serif;min-height:100vh}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 14px;background:rgba(10,14,42,.92);border-bottom:1px solid var(--gl);backdrop-filter:blur(8px)}
+nav button{flex:none;background:none;border:1px solid transparent;color:var(--mu);font:inherit;padding:6px 14px;border-radius:99px;cursor:pointer}
+nav button.on{color:#fff;border-color:var(--tq);background:rgba(45,212,191,.12)}
+.sec{display:none;max-width:1000px;margin:auto;padding:20px 16px 50px}.sec.on{display:block}
+h1,h2,h3{font-weight:800;line-height:1.3;margin:.3em 0}h2{font-size:1.9rem}
+.how{background:var(--gl);border-right:4px solid var(--tq);padding:10px 14px;border-radius:8px;color:var(--mu);margin:10px 0 18px}
+.btn{background:linear-gradient(135deg,var(--pu),#5b3fd0);border:0;color:#fff;font:800 1rem Tajawal;padding:10px 22px;border-radius:12px;cursor:pointer}
+.btn.t{background:linear-gradient(135deg,var(--tq),#139a8c);color:#042}
+.btn:disabled{opacity:.4}
+.card{background:var(--gl);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.cc{cursor:pointer;transition:.2s}.cc:hover{border-color:var(--tq);transform:translateY(-3px)}
+#home{max-width:none;padding:0}.hero{position:relative;height:calc(100vh - 56px);min-height:560px;overflow:hidden}
+#hc{position:absolute;inset:0;width:100%;height:100%}
+.hov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 6vw;max-width:620px;pointer-events:none}
+.hov>*{pointer-events:auto}.hov h1{font-size:clamp(2.2rem,6vw,3.8rem)}
+.bub{background:rgba(20,26,68,.85);border:1px solid var(--tq);border-radius:16px 16px 16px 4px;padding:12px 16px;margin:14px 0;min-height:90px}
+.mod{position:fixed;inset:0;background:rgba(5,7,25,.8);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}.mod.on{display:flex}
+.mod>div{background:#141a44;border:1px solid var(--tq);border-radius:18px;max-width:520px;width:100%;padding:22px;max-height:85vh;overflow:auto}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+.pc{background:var(--gl);border:2px solid transparent;border-radius:14px;padding:8px 12px;text-align:center;cursor:pointer;font-size:.9rem}.pc.on{border-color:var(--tq)}
+.dots{display:flex;flex-wrap:wrap;gap:4px}.dot{width:14px;height:14px;border-radius:50%;animation:pop .4s}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.bars{display:flex;gap:18px;align-items:flex-end;height:170px;padding:8px 0;border-bottom:1px solid var(--mu)}
+.bar{flex:1;text-align:center;font-size:.85rem}.bar i{display:block;border-radius:8px 8px 0 0;transition:height .8s;margin-bottom:4px}
+.pg{display:grid;grid-template-columns:70px 1fr 1fr;gap:6px;max-width:380px;margin:12px auto}
+.sl,.ce{min-height:62px;border:2px dashed var(--mu);border-radius:12px;display:flex;align-items:center;justify-content:center;font:800 1.5rem Tajawal}
+.ce{border-style:solid;border-color:rgba(255,255,255,.2)}.ce.f{animation:pop .5s;background:rgba(139,92,246,.2)}
+.ch{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 1.4rem Tajawal;cursor:grab;color:#031;user-select:none;touch-action:none}
+.ch.u{opacity:.25}.ch.s{outline:3px solid #fff}
+.A{background:var(--tq)}.a{background:var(--pu);color:#fff}
+.opt{display:block;width:100%;text-align:right;background:var(--gl);border:1px solid rgba(255,255,255,.15);color:var(--tx);font:inherit;padding:10px 14px;border-radius:12px;margin:8px 0;cursor:pointer}
+.opt.ok{background:rgba(45,212,191,.25);border-color:var(--tq)}.opt.no{background:rgba(251,113,133,.2);border-color:var(--bad)}
+.fb{min-height:28px;color:var(--tq)}
+table.sq{border-collapse:collapse;margin:8px auto}table.sq td{border:1px solid var(--mu);width:54px;height:44px;text-align:center;font-weight:800}
+#arc{width:100%;height:min(60vh,460px);border-radius:16px;background:radial-gradient(circle,#1b2160,#080b24);touch-action:none;display:block}
+input[type=range]{accent-color:var(--tq)}
+@media(max-width:600px){h2{font-size:1.5rem}.hero{min-height:620px}}
+</style></head><body>
+<nav id="nv"></nav>
+
+<section class="sec on" id="home"><div class="hero"><canvas id="hc"></canvas><div class="hov">
+<h1>رحلة إلى عالم الجينات</h1><div class="bub" id="bub"></div>
+<div><button class="btn t" onclick="go('learn')">ابدئي رحلة الاستكشاف</button></div></div></div></section>
+
+<section class="sec" id="learn"><h2>اكتشفي علم الوراثة</h2><div class="how">اضغطي على أي بطاقة لتفتح شرحها ومثالها العلمي.</div><div class="grid" id="cg"></div></section>
+
+<section class="sec" id="mendel"><h2>مختبر تجارب مندل</h2>
+<div class="how">١) اختاري نباتًا للأب الأول ونباتًا للأب الثاني (اضغطي على النبات لتري صفاته). ٢) اضغطي «لقّحي». ٣) ثم أنتجي الجيل الثاني F2 من نباتات F1.</div>
+<div class="grid"><div class="card"><b>الأب الأول</b><div class="row" id="pa"></div></div><div class="card"><b>الأب الثاني</b><div class="row" id="pb"></div></div></div>
+<div class="card" id="pinfo" style="margin:12px 0">اضغطي على نبات لعرض صفاته.</div>
+<div class="row"><button class="btn" id="bx" onclick="mCross()">لقّحي 🌼</button><button class="btn t" id="bf2" onclick="mF2()" disabled>أنتجي الجيل F2</button></div>
+<div class="card" id="mout" style="display:none"></div></section>
+
+<section class="sec" id="punnett"><h2>مختبر مربع بانيت</h2>
+<div class="how">اختاري الطراز الجيني للأبوين، ثم اسحبي الأمشاج إلى الصف والعمود المناسبين (أو اضغطي المشيج ثم الخانة). اللون التركوازي = أليل سائد T، البنفسجي = أليل متنحٍّ t.</div>
+<div class="row">الأب الأول: <span id="sa"></span> × الأب الثاني: <span id="sb"></span></div>
+<div class="row"><div>أمشاج الأب الأول (للصفوف): <span id="ca"></span></div><div>أمشاج الأب الثاني (للأعمدة): <span id="cb"></span></div></div>
+<div class="pg" id="pgrid"></div>
+<div class="row" style="justify-content:center"><button class="btn t" onclick="autoFill()">املئي تلقائيًا</button><button class="btn" onclick="resetP()">إعادة</button></div>
+<div id="pres" class="card" style="display:none"></div>
+<div class="card" style="margin-top:14px"><h3>توقعي النتيجة قبل الكشف</h3><div>ما النسبة المئوية المتوقعة للنباتات الطويلة؟</div><div class="row" id="pred"></div><div class="fb" id="pfb"></div></div></section>
+
+<section class="sec" id="ar"><h2>الوراثة بين يديكِ</h2>
+<div class="how">دوّري النموذج بإصبعك، وقرّبيه بالمنزلق، واضغطي على أجزائه لمعرفة أسمائها. الواقع المعزز الحقيقي (WebXR) يعمل على متصفحات أندرويد المدعومة؛ أما Safari على الآيباد فلا يدعم WebXR حاليًا، لذلك يعمل النموذج هنا بوضع ثلاثي الأبعاد تفاعلي كامل.</div>
+<div class="row" id="am"></div><canvas id="arc"></canvas>
+<div class="row"><span>تقريب</span><input type="range" id="zm" min="0.6" max="2.2" step="0.05" value="1"><button class="btn t" onclick="startAR()">تشغيل الواقع المعزز</button></div>
+<div class="card" id="ainfo">اضغطي على جزء من النموذج.</div></section>
+
+<section class="sec" id="games"><h2>تحديات عالمة الوراثة</h2><div class="how">اختاري تحديًا. كل إجابة صحيحة تمنحك ١٠ نقاط، والإجابات المتتالية تمنحك نقاطًا إضافية.</div><div class="row" id="gl"></div><div class="card" id="gbox" style="display:none"></div></section>
+
+<section class="sec" id="quiz"><h2>الاختبار الختامي</h2><div class="how">١٠ أسئلة تشمل تحليل مربع بانيت وتفسير نتائج مندل. تظهر الإجابات الصحيحة في النهاية.</div><div class="card" id="qbox"></div></section>
+
+<div class="mod" id="md" onclick="if(event.target==this)this.classList.remove('on')"><div id="mdc"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),sleep=t=>new Promise(r=>setTimeout(r,t));
+const SECS=[['home','الرئيسية'],['learn','اكتشفي'],['mendel','تجارب مندل'],['punnett','مربع بانيت'],['ar','الواقع المعزز'],['games','التحديات'],['quiz','الاختبار']];
+let cur='home';
+$('#nv').innerHTML=SECS.map(s=>`<button data-s="${s[0]}" onclick="go('${s[0]}')">${s[1]}</button>`).join('');
+function go(id){cur=id;document.querySelectorAll('.sec').forEach(e=>e.classList.toggle('on',e.id==id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.s==id));scrollTo(0,0);if(id=='ar')setTimeout(()=>{rs();show(0)},50)}
+go('home');
+const nrm=(a,b)=>[a,b].sort().join(''),ph=g=>g.includes('T')?'طويل':'قصير',col=a=>a=='T'?'#2dd4bf':'#8b5cf6';
+const mdl=h=>{$('#mdc').innerHTML=h+'<p><button class="btn" onclick="$(\'#md\').classList.remove(\'on\')">إغلاق</button></p>';$('#md').classList.add('on')};
+/* ---------- 3D helpers ---------- */
+const M=(c,e=0)=>new THREE.MeshStandardMaterial({color:c,emissive:e||0,roughness:.4});
+const L=g=>{g.add(new THREE.AmbientLight(0xffffff,.7));const d=new THREE.DirectionalLight(0xffffff,.9);d.position.set(3,4,5);g.add(d)};
+function dna(n=26){const g=new THREE.Group(),sp=new THREE.SphereGeometry(.14,12,12),cy=new THREE.CylinderGeometry(.035,.035,2,6);
+for(let i=0;i<n;i++){const w=new THREE.Group();w.rotation.y=-i*.55;w.position.y=i*.17-n*.085;
+const c=new THREE.Mesh(cy,M(i%2?0xffffff:0x9aa5ff));c.rotation.z=Math.PI/2;c.userData.label='الروابط بين القواعد النيتروجينية: تحمل المعلومات الوراثية';
+const a=new THREE.Mesh(sp,M(0x2dd4bf,0x0a5a50)),b=new THREE.Mesh(sp,M(0x8b5cf6,0x3b1a8a));a.position.x=1;b.position.x=-1;a.userData.label=b.userData.label='سلسلة السكر والفوسفات: الهيكل الذي يحمل القواعد';
+w.add(c,a,b);g.add(w)}return g}
+function tx(s,c='#fff'){const k=document.createElement('canvas');k.width=256;k.height=128;const x=k.getContext('2d');x.fillStyle=c;x.font='bold 64px Tajawal,sans-serif';x.textAlign='center';x.fillText(s,128,84);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(k),transparent:true}));sp.scale.set(1.2,.6,1);return sp}
+function chrom(){const g=new THREE.Group();[-1,1].forEach(s=>{[-1,1].forEach(t=>{const a=new THREE.Mesh(new THREE.CylinderGeometry(.28,.28,1.5,16),M(0x8b5cf6,0x2a1580));a.position.set(s*.3,t*.95,0);a.userData.label='الكروماتيد: نسخة من الكروموسوم تحمل الجينات';const e=new THREE.Mesh(new THREE.SphereGeometry(.28,16,16),a.material);e.position.set(s*.3,t*1.7,0);e.userData.label=a.userData.label;g.add(a,e);
+[.5,1,1.4].forEach((y,i)=>{const r=new THREE.Mesh(new THREE.TorusGeometry(.29,.05,8,20),M([0x2dd4bf,0xffffff,0xfbbf24][i]));r.rotation.x=Math.PI/2;r.position.set(s*.3,t*y+t*.1,0);r.userData.label='حزمة تمثل موضع جين على الكروموسوم';g.add(r)})})});
+const c=new THREE.Mesh(new THREE.SphereGeometry(.4,16,16),M(0xfbbf24,0x7a5500));c.scale.set(1.5,.5,1);c.userData.label='السنترومير: نقطة تثبيت الكروماتيدين';g.add(c);return g}
+function pea(tall,x){const g=new THREE.Group(),h=tall?2.6:1.1,k=tall?'نبات طويل: طراز جيني TT أو Tt (الأليل T سائد)':'نبات قصير: طراز جيني tt (صفة متنحية)';
+const s=new THREE.Mesh(new THREE.CylinderGeometry(.06,.08,h,8),M(0x22c55e));s.position.y=h/2;s.userData.label=k;g.add(s);
+for(let i=0;i<4;i++){const l=new THREE.Mesh(new THREE.SphereGeometry(.28,10,10),M(0x16a34a));l.scale.set(1.6,.3,.8);l.position.set(i%2?.3:-.3,h*(.3+i*.17),0);l.userData.label=k;g.add(l)}
+const f=new THREE.Mesh(new THREE.SphereGeometry(.2,12,12),M(0xffffff,0x555555));f.position.y=h+.1;f.userData.label=k;g.add(f);
+const p=new THREE.Mesh(new THREE.SphereGeometry(.14,10,10),M(0x84cc16));p.scale.set(1,2.5,1);p.position.set(.35,h*.5,0);p.rotation.z=-.5;p.userData.label=k;g.add(p);
+const t=tx(tall?'طويل T':'قصير tt',tall?'#2dd4bf':'#c4b5fd');t.position.y=h+.7;g.add(t);g.position.x=x;g.position.y=-1.3;return g}
+function pun3(){const g=new THREE.Group(),G=['TT','Tt','Tt','tt'];G.forEach((s,i)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(1.3,.3,1.3),M(s=='tt'?0x8b5cf6:0x2dd4bf,0x111133));b.position.set((i%2-.5)*1.4,0,(Math.floor(i/2)-.5)*1.4);b.userData.label='الخانة '+s+': '+(s=='tt'?'صفة متنحية ظاهرة (قصير)':'صفة سائدة ظاهرة (طويل)');g.add(b);const t=tx(s);t.position.set(b.position.x,.7,b.position.z);g.add(t)});
+[['T',-.7],['t',.7]].forEach(([a,x])=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.25,16,16),M(a=='T'?0x2dd4bf:0x8b5cf6));m.position.set(x,.2,-1.7);m.userData.label='مشيج يحمل الأليل '+a;g.add(m);const n=m.clone();n.position.set(-1.7,.2,x);n.userData.label=m.userData.label;g.add(n)});return g}
+function allel(){const g=new THREE.Group(),lv=[['TT','tt'],['Tt','Tt'],['TT','Tt','Tt','tt']],names=['الآباء P','الجيل F1','الجيل F2'];
+lv.forEach((r,y)=>{const t=tx(names[y],'#fbbf24');t.position.set(-2.6,1.4-y*1.4,0);g.add(t);r.forEach((s,i)=>{[0,1].forEach(k=>{const m=new THREE.Mesh(new THREE.SphereGeometry(.16,12,12),M(s[k]=='T'?0x2dd4bf:0x8b5cf6));m.position.set((i-(r.length-1)/2)*1.1+(k-.5)*.3,1.4-y*1.4,0);m.userData.label='أليل '+s[k]+' في فرد '+s+(y?' من '+names[y]:'');g.add(m)})})});return g}
+const MODS=[['DNA','جزيء DNA',()=>dna()],['كروموسوم','كروموسوم',chrom],['بازلاء','نبات البازلاء',()=>{const g=new THREE.Group();g.add(pea(1,-1),pea(0,1));return g}],['بانيت','مربع بانيت مجسم',pun3],['الأليلات','انتقال الأليلات',allel]];
+/* ---------- home scene ---------- */
+(function(){const cv=$('#hc'),R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true}),S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,1,.1,100);C.position.z=9;L(S);
+const d=dna(30);d.position.x=-4;d.scale.setScalar(1.1);S.add(d);const cells=[];for(let i=0;i<14;i++){const m=new THREE.Mesh(new THREE.IcosahedronGeometry(.3+Math.random()*.4,1),new THREE.MeshStandardMaterial({color:i%2?0x2dd4bf:0x8b5cf6,transparent:true,opacity:.35,wireframe:i%3==0}));m.position.set(Math.random()*14-7,Math.random()*8-4,Math.random()*-4);S.add(m);cells.push(m)}
+const sc=new THREE.Group(),sk=M(0xf1c9a5);const body=new THREE.Mesh(new THREE.CylinderGeometry(.5,.8,1.6,20),M(0xffffff));const sf=new THREE.Mesh(new THREE.SphereGeometry(.56,20,20),M(0x7c3aed));sf.position.y=1.25;const fc=new THREE.Mesh(new THREE.SphereGeometry(.42,20,20),sk);fc.position.set(0,1.2,.22);
+[-.15,.15].forEach(x=>{const e=new THREE.Mesh(new THREE.SphereGeometry(.05,8,8),M(0x222222));e.position.set(x,1.25,.62);sc.add(e);const gl=new THREE.Mesh(new THREE.TorusGeometry(.1,.015,6,16),M(0x2dd4bf));gl.position.set(x,1.25,.63);sc.add(gl)});
+const arm=new THREE.Group(),ar=new THREE.Mesh(new THREE.CylinderGeometry(.1,.1,.9,8),M(0xffffff));ar.position.y=.4;arm.add(ar);arm.position.set(-.6,.6,0);const fl=new THREE.Mesh(new THREE.SphereGeometry(.2,12,12),M(0x2dd4bf,0x0a6a60));fl.position.set(.9,.3,.4);sc.add(body,sf,fc,arm,fl);sc.position.set(3.2,-.6,0);S.add(sc);
+function rs(){const w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);C.aspect=w/h;if(w<700){sc.position.set(1.8,-3.2,0);sc.scale.setScalar(.8);d.position.x=-2.8}else{sc.position.set(3.2,-.6,0);sc.scale.setScalar(1);d.position.x=-4}C.updateProjectionMatrix()}
+rs();addEventListener('resize',rs);let t=0;(function f(){requestAnimationFrame(f);if(cur!='home')return;t+=.016;d.rotation.y=t*.6;cells.forEach((c,i)=>{c.rotation.y+=.01;c.position.y+=Math.sin(t+i)*.003});sc.position.y+=Math.sin(t*2)*.002;arm.rotation.z=2.3+Math.sin(t*5)*.4;R.render(S,C)})()})();
+const WT='مرحبًا بكِ في مختبر الوراثة، هل أنتِ مستعدة لاكتشاف أسرار الصفات الوراثية؟';let wi=0;(function ty(){$('#bub').textContent=WT.slice(0,wi++);if(wi<=WT.length)setTimeout(ty,45)})();
+/* ---------- concepts ---------- */
+const CON=[['🧬','الوراثة','انتقال الصفات من الآباء إلى الأبناء عبر الأمشاج.','تشبه الابنة أمها في لون العينين.'],['🌱','الصفات الوراثية','صفات تنتقل عبر الجينات، مثل طول ساق نبات البازلاء ولون الزهرة وشكل البذرة.','مندل درس سبع صفات في البازلاء.'],['🔬','الجينات','أجزاء من DNA تحمل تعليمات صفة معينة. للصفة الواحدة أليلان: أليل من كل أب.','الجين T لطول الساق، وt للقصر.'],['🧫','الكروموسومات','تراكيب في النواة تحمل الجينات. للخلية الجسمية البشرية 46 كروموسومًا (23 زوجًا).','الجين يحتل موضعًا ثابتًا على الكروموسوم.'],['⚖️','السائدة والمتنحية','الأليل السائد (T) يظهر أثره دائمًا، والمتنحي (t) لا يظهر إلا إذا وُجد أليلان متنحيان معًا.','Tt تعطي نباتًا طويلًا، وtt فقط تعطي قصيرًا.'],['🎭','الطراز الجيني والشكلي','الطراز الجيني هو تركيب الأليلات (TT, Tt, tt). الطراز الشكلي هو الصفة الظاهرة (طويل أو قصير).','TT وTt لهما طراز شكلي واحد (طويل) وطرازان جينيان مختلفان.']];
+$('#cg').innerHTML=CON.map((c,i)=>`<div class="card cc" onclick="mdl('<h3>${c[0]} ${c[1]}</h3><p>${c[2]}</p><p><b>مثال:</b> ${c[3]}</p>')"><div style="font-size:2.2rem">${c[0]}</div><h3>${c[1]}</h3><small style="color:var(--mu)">اضغطي للشرح</small></div>`).join('');
+/* ---------- Mendel lab ---------- */
+const PL=[['TT','طويل نقي'],['Tt','طويل هجين'],['tt','قصير نقي']];let sa=null,sb=null,f1=[];
+const psv=(g,c)=>{const t=g.includes('T'),h=t?70:34;return `<svg viewBox="0 0 60 100" width="52"><path d="M30 96V${96-h}" stroke="${c}" stroke-width="4"/><ellipse cx="20" cy="${96-h+10}" rx="9" ry="4" fill="${c}"/><ellipse cx="40" cy="${96-h*.5}" rx="9" ry="4" fill="${c}"/><circle cx="30" cy="${96-h-4}" r="6" fill="#fff"/></svg>`};
+function mp(w){$('#p'+w).innerHTML=PL.map(p=>`<div class="pc ${(w=='a'?sa:sb)==p[0]?'on':''}" onclick="pick('${w}','${p[0]}')">${psv(p[0],'#4ade80')}<br>${p[1]}</div>`).join('')}
+function pick(w,g){w=='a'?sa=g:sb=g;mp('a');mp('b');$('#pinfo').innerHTML=`الطراز الشكلي: <b>${ph(g)}</b> — الطراز الجيني: <b>${g}</b> (${g[0]==g[1]?'نقي':'هجين'})`}
+mp('a');mp('b');
+const rnd=g=>g[Math.random()<.5?0:1],cnt=l=>{const o={};l.forEach(g=>o[g]=(o[g]||0)+1);return o};
+const bars=(it)=>{const mx=Math.max(...it.map(i=>i.n),1);return `<div class="bars">${it.map(i=>`<div class="bar"><i style="height:${i.n/mx*120}px;background:${i.c}"></i>${i.n}<br>${i.l}</div>`).join('')}</div>`};
+const dts=l=>`<div class="dots">${l.map(g=>`<span class="dot" style="background:${g.includes('T')?'#2dd4bf':'#8b5cf6'}" title="${g}"></span>`).join('')}</div>`;
+function stats(l,t){const c=l.filter(g=>g.includes('T')).length,s=l.length-c;return bars([{l:'طويل',n:c,c:'#2dd4bf'},{l:'قصير',n:s,c:'#8b5cf6'}])+`<div>${t}: ${c} طويل : ${s} قصير${s?` ≈ ${(c/s).toFixed(1)} : 1`:' (كلها طويلة)'}</div>`}
+async function mCross(){if(!sa||!sb){$('#pinfo').textContent='اختاري نباتين أولًا.';return}
+$('#bx').disabled=true;const o=$('#mout');o.style.display='block';o.innerHTML=`<h3>التلقيح</h3><p>أمشاج الأب الأول: ${sa[0]} و${sa[1]} — أمشاج الأب الثاني: ${sb[0]} و${sb[1]}</p><div style="font-size:2rem" id="pl">🌼</div>`;
+for(let i=0;i<4;i++){$('#pl').textContent=['🌼','🐝','🌼✨','🌱'][i];await sleep(600)}
+f1=Array.from({length:40},()=>nrm(rnd(sa),rnd(sb)));
+o.innerHTML=`<h3>الجيل الأول F1 (40 نباتًا)</h3>${dts(f1)}${stats(f1,'النتيجة')}<p>الأنماط الجينية: ${Object.entries(cnt(f1)).map(e=>e[0]+'='+e[1]).join('، ')}</p>`;$('#bx').disabled=false;$('#bf2').disabled=false}
+async function mF2(){const o=$('#mout');const a=f1[Math.floor(Math.random()*f1.length)],b=f1[Math.floor(Math.random()*f1.length)];
+const f2=Array.from({length:80},()=>nrm(rnd(a),rnd(b)));o.innerHTML+=`<hr><h3>الجيل الثاني F2</h3><p>تلقيح نبتتين من F1 (${a} × ${b})</p>${dts(f2)}${stats(f2,'النتيجة')}<p style="color:var(--mu)">عند تلقيح Tt × Tt تتوقع النسبة 3 : 1، وتقترب النتائج منها كلما زاد عدد النباتات.</p>`;o.scrollIntoView({behavior:'smooth',block:'end'})}
+/* ---------- Punnett ---------- */
+let P={a:'Tt',b:'Tt'},SL,sel,pd;
+const GS=['TT','Tt','tt'];
+function pinit(){SL={r:[null,null],c:[null,null]};sel=null;pd=false;$('#pres').style.display='none';$('#pfb').textContent='';
+['a','b'].forEach(w=>$('#s'+w).innerHTML=GS.map(g=>`<button class="pc ${P[w]==g?'on':''}" onclick="P.${w}='${g}';pinit()">${g}</button>`).join(''));
+$('#pred').innerHTML=[0,25,50,75,100].map(v=>`<button class="pc" onclick="predict(${v})">${v}%</button>`).join('');prP()}
+const used=(k)=>SL[k].includes(0)||0;
+function chips(w,k){return [0,1].map(i=>{const al=P[w][i],u=SL[k].includes(i);return `<span class="ch ${al=='T'?'A':'a'} ${u?'u':''} ${sel==k+i?'s':''}" draggable="true" data-id="${k}${i}" onclick="sel='${k}${i}';prP()" ondragstart="event.dataTransfer.setData('text/plain','${k}${i}')">${al}</span>`}).join(' ')}
+function prP(){$('#ca').innerHTML=chips('a','r');$('#cb').innerHTML=chips('b','c');
+const al=(k,i)=>SL[k][i]==null?'':P[k=='r'?'a':'b'][SL[k][i]],sl=(k,i)=>`<div class="sl" data-k="${k}" data-i="${i}" ondragover="event.preventDefault()" ondrop="drop(event,'${k}',${i})" onclick="clk('${k}',${i})" style="color:${col(al(k,i))}">${al(k,i)||'؟'}</div>`;
+let h='<div></div>'+sl('c',0)+sl('c',1);for(let r=0;r<2;r++){h+=sl('r',r);for(let c=0;c<2;c++){const x=al('r',r),y=al('c',c);h+=`<div class="ce ${x&&y?'f':''}">${x&&y?nrm(x,y):''}</div>`}}$('#pgrid').innerHTML=h;
+if(SL.r.every(v=>v!=null)&&SL.c.every(v=>v!=null)&&!pd){pd=true;showP()}}
+function place(k,i,id){if(id[0]!=k){$('#pres').style.display='block';$('#pres').innerHTML='⚠️ هذا المشيج يخص الأب الآخر. ضعيه في '+(id[0]=='r'?'الصفوف (اليمين)':'الأعمدة (الأعلى)')+'.';return}
+const j=+id[1];SL[k]=SL[k].map(v=>v==j?null:v);SL[k][i]=j;sel=null;prP()}
+function drop(e,k,i){e.preventDefault();place(k,i,e.dataTransfer.getData('text/plain'))}
+function clk(k,i){if(sel)place(k,i,sel);else{SL[k][i]=null;pd=false;prP()}}
+function cells(){const r=[];for(const x of P.a)for(const y of P.b)r.push(nrm(x,y));return r}
+function showP(){const c=cells(),n=cnt(c),t=c.filter(g=>g.includes('T')).length*25,o=$('#pres');o.style.display='block';
+o.innerHTML=`<h3>🎉 اكتمل التلقيح</h3><div>الطرز الجينية: ${Object.entries(n).map(e=>`<b style="color:${e[0]=='tt'?'#c4b5fd':'#2dd4bf'}">${e[0]}</b> ${e[1]*25}%`).join(' | ')}</div>`+bars([{l:'طويل',n:t,c:'#2dd4bf'},{l:'قصير',n:100-t,c:'#8b5cf6'}])+`<div>الطراز الشكلي: ${t}% طويل، ${100-t}% قصير</div>`}
+function autoFill(){SL={r:[0,1],c:[0,1]};pd=false;prP()}
+function resetP(){pinit()}
+function predict(v){const t=cells().filter(g=>g.includes('T')).length*25;autoFill();$('#pfb').innerHTML=v==t?`✅ أحسنتِ! النسبة ${t}% صحيحة.`:`❌ توقعتِ ${v}% لكن الصحيح ${t}%: عدّي الخانات التي تحمل T في المربع.`}
+pinit();
+/* ---------- AR / 3D viewer ---------- */
+let R,S,C,G,ci=0,drag=0,px,py,rx=0,ry=0,ray=new THREE.Raycaster();
+function initAR(){const cv=$('#arc');R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});S=new THREE.Scene();C=new THREE.PerspectiveCamera(50,1,.1,100);L(S);
+cv.addEventListener('pointerdown',e=>{drag=1;px=e.clientX;py=e.clientY;cv._m=0});
+addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-px,dy=e.clientY-py;if(Math.abs(dx)+Math.abs(dy)>3)cv._m=1;ry+=dx*.01;rx+=dy*.01;px=e.clientX;py=e.clientY});
+addEventListener('pointerup',e=>{if(drag&&!cv._m)pick3(e);drag=0});
+$('#zm').oninput=()=>{};R.setAnimationLoop(()=>{if(cur!='ar'&&!R.xr.isPresenting)return;if(!R.xr.isPresenting){C.position.set(0,0,6/$('#zm').value);C.lookAt(0,0,0);if(G){G.rotation.y=ry+performance.now()*.0003*(!drag);G.rotation.x=Math.max(-1,Math.min(1,rx))}}R.render(S,C)})}
+function rs(){if(!R)initAR();const cv=$('#arc'),w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix()}
+function show(i){ci=i;if(G)S.remove(G);G=MODS[i][2]();S.add(G);rx=ry=0;$('#am').innerHTML=MODS.map((m,j)=>`<button class="pc ${j==i?'on':''}" onclick="show(${j})">${m[1]}</button>`).join('');$('#ainfo').textContent='اضغطي على جزء من النموذج لمعرفة اسمه ووظيفته.'}
+function pick3(e){const cv=$('#arc'),r=cv.getBoundingClientRect(),v=new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);if(Math.abs(v.x)>1||Math.abs(v.y)>1)return;ray.setFromCamera(v,C);const h=ray.intersectObjects(G.children,true).find(x=>x.object.userData.label);if(h)$('#ainfo').innerHTML='🔎 '+h.object.userData.label}
+async function startAR(){const i=$('#ainfo');if(!navigator.xr||!(await navigator.xr.isSessionSupported('immersive-ar').catch(()=>false))){i.innerHTML='⚠️ هذا الجهاز أو المتصفح لا يدعم WebXR للواقع المعزز (Safari على الآيباد لا يدعمه). متطلباته: هاتف أندرويد حديث مع Chrome وخدمات Google Play للواقع المعزز. استخدمي النموذج ثلاثي الأبعاد أعلاه بدلًا منه.';return}
+try{const s=await navigator.xr.requestSession('immersive-ar');R.xr.enabled=true;R.xr.setReferenceSpaceType('local');await R.xr.setSession(s);G.position.set(0,-.1,-1.2);G.scale.setScalar(.25);s.addEventListener('end',()=>{R.xr.enabled=false;G.position.set(0,0,0);G.scale.setScalar(1)})}catch(e){i.textContent='تعذر بدء الواقع المعزز: '+e.message}}
+/* ---------- quiz / games engine ---------- */
+const sq=(a,b,h=-1)=>{const c=[];for(const x of a)for(const y of b)c.push(nrm(x,y));const f=i=>i==h?'؟':c[i];return `<table class="sq"><tr><td></td><td style="color:${col(b[0])}">${b[0]}</td><td style="color:${col(b[1])}">${b[1]}</td></tr><tr><td style="color:${col(a[0])}">${a[0]}</td><td>${f(0)}</td><td>${f(1)}</td></tr><tr><td style="color:${col(a[1])}">${a[1]}</td><td>${f(2)}</td><td>${f(3)}</td></tr></table>`};
+const TF=['صح','خطأ'];
+const GM={
+'اكتشفي الصفة السائدة':[['تزاوج نبات طويل نقي مع قصير نقي فكانت كل نباتات F1 طويلة. أي الصفتين سائدة؟',['الطول','القصر'],0,'ظهرت صفة الطول وحدها في F1 فهي السائدة.'],['بذور ملساء × مجعدة (نقيتان) فكانت كل F1 ملساء. السائدة؟',['ملساء','مجعدة'],0,'الملساء ظهرت في F1.'],['ظهر في F2 نسبة 3 زهور أرجوانية : 1 بيضاء. السائدة؟',['الأرجوانية','البيضاء'],0,'الصفة السائدة تمثل نحو ثلاثة أرباع F2.'],['بذور صفراء × خضراء نقيتان فكانت F1 كلها صفراء. الصفة المتنحية؟',['الصفراء','الخضراء'],1,'الخضراء اختفت في F1 فهي متنحية.']],
+'من الأب المحتمل؟':[['الأم Tt وابنها قصير tt. أي طراز لا يمكن أن يكون للأب؟',['TT','Tt','tt'],0,'الابن tt يحتاج t من كل أب، والأب TT لا يعطي t.'],['الأم tt وكل الأبناء طويلة. الأب الأرجح؟',['TT','Tt','tt'],0,'الأب TT يعطي T دائمًا.'],['الأم tt ونصف الأبناء طويل ونصفهم قصير. الأب؟',['TT','Tt','tt'],1,'Tt × tt تعطي 1 : 1.'],['الأب TT والابن قصير. هل ممكن؟',['ممكن','مستحيل'],1,'الأب TT يعطي T فقط فلن يكون الابن tt.']],
+'أكملي مربع بانيت':[[sq('Tt','Tt',3)+'ما الطراز الجيني في الخانة ؟',['TT','Tt','tt'],2,'t من الأب و t من الأم.'],[sq('Tt','tt',0)+'ما الطراز الجيني في الخانة ؟',['TT','Tt','tt'],1,'T مع t يعطي Tt.'],[sq('TT','Tt',1)+'ما الطراز الجيني في الخانة ؟',['TT','Tt','tt'],1,'T من الأب وt من الأم.'],[sq('Tt','Tt',0)+'ما الطراز الجيني في الخانة ؟',['TT','Tt','tt'],0,'T مع T.']],
+'صح أم خطأ؟':[['الأليل المتنحي يظهر دائمًا في الطراز الشكلي.',TF,1,'لا يظهر إلا عند وجود أليلين متنحيين.'],['النبات Tt طويل.',TF,0,'T سائد فيظهر الطول.'],['الجينات توجد على الكروموسومات.',TF,0,'كل جين له موضع ثابت.'],['الطراز الجيني هو الصفة الظاهرة.',TF,1,'الصفة الظاهرة هي الطراز الشكلي.']],
+'لغز الجينات':[['أنا أليل لا أظهر إلا إذا وُجدت نسخة مثلي. من أنا؟',['سائد','متنحٍّ'],1,'الأليل المتنحي.'],['أنا Tt: أحمل أليلين مختلفين. ما اسمي؟',['نقي','هجين'],1,'الطراز الهجين.'],['أنا تركيب أليلات النبات، لا يُرى بالعين. من أنا؟',['الطراز الجيني','الطراز الشكلي'],0,'الطراز الجيني.'],['أنا نبات tt، أعطي دائمًا نوعًا واحدًا من الأمشاج. من أنا؟',['قصير نقي','طويل هجين'],0,'tt نقي ويعطي t فقط.']],
+'تحدي مندل':[['تلقيح Tt × Tt: ما نسبة الطراز الشكلي (طويل : قصير)؟',['1 : 1','3 : 1','1 : 2 : 1'],1,'TT وTt وTt طويلة وtt قصير.'],['في F2 من 400 نبات (Tt × Tt) كم عدد الطويلة المتوقع؟',['100','200','300'],2,'ثلاثة أرباع 400 = 300.'],['تلقيح TT × tt: ما الطراز الجيني لـ F1؟',['TT','Tt','tt'],1,'T من أب وt من الآخر.'],['تلقيح Tt × tt: نسبة الأبناء الطويلة؟',['25%','50%','75%'],1,'نصف الأبناء Tt ونصفهم tt.']]};
+$('#gl').innerHTML=Object.keys(GM).map(k=>`<button class="btn" onclick="run('gbox','${k}',GM['${k}'])">${k}</button>`).join('');
+const QZ=[['أي مما يلي طراز جيني هجين؟',['TT','Tt','tt'],1,'الهجين يحمل أليلين مختلفين.'],['أي مصطلح يصف الصفة الظاهرة؟',['الطراز الجيني','الطراز الشكلي','الكروموسوم'],1,'الظاهر هو الشكلي.'],[sq('Tt','Tt')+'حللي المربع: ما نسبة النباتات الطويلة؟',['25%','50%','75%'],2,'ثلاث خانات تحمل T.'],[sq('Tt','tt')+'ما نسبة الطراز Tt في النسل؟',['25%','50%','100%'],1,'خانتان من أربع.'],['حصل مندل على 787 نباتًا طويلًا و277 قصيرًا في F2. النسبة التقريبية؟',['1 : 1','3 : 1','1 : 3'],1,'787 ÷ 277 ≈ 2.8 أي نحو 3 : 1.'],['لماذا اختفت صفة القصر في F1 عند تلقيح نقيين؟',['لأنها سائدة','لأنها متنحية ويخفيها الأليل السائد','لأن الجين تلف'],1,'الأليل T السائد أخفاها وعادت في F2.'],['<svg viewBox="0 0 240 110" width="240"><g stroke="#4ade80" stroke-width="4"><path d="M40 105V35"/><path d="M120 105V75"/><path d="M200 105V35"/></g><g fill="#fff"><circle cx="40" cy="30" r="7"/><circle cx="120" cy="70" r="7"/><circle cx="200" cy="30" r="7"/></g></svg><br>في الصورة 3 نباتات من F2 (2 طويلة، 1 قصيرة). أي هذا يتوافق مع القانون؟',['يتوافق مع نسبة 3 : 1 تقريبًا','يتعارض تمامًا مع الوراثة المندلية'],0,'العينة صغيرة لكن تقارب 3 : 1 (2 : 1 هنا بالصدفة).'],['كم كروموسومًا في الخلية الجسمية البشرية؟',['23','46','92'],1,'23 زوجًا.'],[sq('TT','tt')+'ما نسبة الأبناء القصيرين؟',['0%','50%','100%'],0,'كل الأبناء Tt وطوال.'],['أي الأمشاج ينتجها النبات Tt؟',['T فقط','t فقط','T وt بنسبة متساوية'],2,'ينفصل الأليلان عند تكوين الأمشاج.']];
+function run(id,title,qs,quiz){let i=0,sc=0,st=0,wr=[];const b=$('#'+id);b.style.display='block';
+(function q(){if(i>=qs.length){b.innerHTML=`<h3>🏆 ${quiz?'النتيجة النهائية':'انتهى التحدي'}: ${sc} نقطة</h3><p>الإجابات الصحيحة: ${qs.length-wr.length} من ${qs.length}</p>`+(quiz?qs.map((x,k)=>`<div class="card" style="margin:8px 0"><div>${k+1}) ${x[0]}</div><div style="color:var(--tq)">✔ ${x[1][x[2]]} — ${x[3]}</div></div>`).join(''):'')+`<button class="btn" onclick="run('${id}','${title}',${id=='qbox'?'QZ':`GM['${title}']`},${!!quiz})">أعيدي المحاولة</button>`;return}
+const x=qs[i];b.innerHTML=`<div style="color:var(--mu)">${title} — السؤال ${i+1} من ${qs.length} — النقاط: ${sc} ${st>1?'🔥':''}</div><p>${x[0]}</p>`+x[1].map((o,k)=>`<button class="opt" data-k="${k}">${o}</button>`).join('')+'<div class="fb"></div>';
+b.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{const k=+o.dataset.k,ok=k==x[2];b.querySelectorAll('.opt').forEach(e=>{e.disabled=true;if(+e.dataset.k==x[2])e.classList.add('ok')});if(ok){st++;sc+=10+(st>1?5:0)}else{st=0;o.classList.add('no');wr.push(i)}
+if(!quiz)b.querySelector('.fb').innerHTML=(ok?'✅ أحسنتِ! ':'❌ ')+x[3];setTimeout(()=>{i++;q()},quiz?600:1700)})})()}
+run('qbox','الاختبار الختامي',QZ,1);
+</script></body></html>
